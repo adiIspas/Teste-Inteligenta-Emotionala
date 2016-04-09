@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Punctaj: "
+        android:textColor="@color/white"
+        android:id="@+id/testScore"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="37dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/score"
+        android:layout_toStartOf="@+id/score" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="60"
+        android:id="@+id/score"
+        android:layout_marginRight="150dp"
+        android:layout_marginEnd="150dp"
+        android:layout_alignTop="@+id/testScore"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Tarie de caracter foarte mare"
+        android:textColor="@color/white"
+        android:id="@+id/shortScoreDescription"
+        android:layout_below="@+id/testScore"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas, elit ut maximus pellentesque, mi nisi rhoncus urna, vel euismod mauris eros in diam. Integer euismod, velit vitae ultricies tincidunt, ante elit bibendum libero, imperdiet hendrerit augue metus vitae lorem."
+        android:id="@+id/completScoreDescription"
+        android:textColor="@color/white"
+        android:layout_below="@+id/shortScoreDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="46dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alte teste"
+        android:id="@+id/buttonTestAgain"
+        android:layout_marginBottom="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

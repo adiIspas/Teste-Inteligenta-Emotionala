@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Taria de caracter"
+        android:id="@+id/testName"
+        android:layout_gravity="center_horizontal"
+        android:layout_above="@+id/testDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="78dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas, elit ut maximus pellentesque, mi nisi rhoncus urna, vel euismod mauris eros in diam. Integer euismod, velit vitae ultricies tincidunt, ante elit bibendum libero, imperdiet hendrerit augue metus vitae lorem."
+        android:id="@+id/testDescription"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="START TEST"
+        android:id="@+id/buttonStartTest"
+        android:layout_marginBottom="63dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
