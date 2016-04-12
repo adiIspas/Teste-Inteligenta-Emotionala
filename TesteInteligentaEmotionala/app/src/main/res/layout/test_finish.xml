@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas, elit ut maximus pellentesque, mi nisi rhoncus urna, vel euismod mauris eros in diam. Integer euismod, velit vitae ultricies tincidunt, ante elit bibendum libero, imperdiet hendrerit augue metus vitae lorem."
+        android:text="Lorem ipsum."
         android:id="@+id/completScoreDescription"
         android:textColor="@color/white"
         android:layout_below="@+id/shortScoreDescription"

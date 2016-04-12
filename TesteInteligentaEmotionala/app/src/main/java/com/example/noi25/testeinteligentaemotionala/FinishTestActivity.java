@@ -19,8 +19,10 @@ public class FinishTestActivity extends AppCompatActivity {
 
         int scor = getIntent().getIntExtra("Scor",-1);
 
+        TextView completDescription = (TextView) findViewById(R.id.completScoreDescription);
         TextView score = (TextView) findViewById(R.id.score);
-        score.setText("" + scor);
+        score.setText("Punctaj " + scor);
+        completDescription.setText("A fost ca niciodata o descriere si tot asa a fost si a fost si nu a mai fost doar sa fie scris.");
 
         Button alteTeste = (Button) findViewById(R.id.buttonTestAgain);
 
@@ -29,6 +31,7 @@ public class FinishTestActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),TestsActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

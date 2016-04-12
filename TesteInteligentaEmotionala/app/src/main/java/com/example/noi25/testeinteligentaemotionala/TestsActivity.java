@@ -59,11 +59,13 @@ public class TestsActivity extends AppCompatActivity {
                     Intent intent = new Intent(TestsActivity.this, TestActivity.class).putExtra(Intent.EXTRA_TEXT, test);
                     intent.putExtra("Tarie de caracter",0);
                     startActivity(intent);
+                    finish();
                }
                if(position == 1){
                    Intent intent = new Intent(TestsActivity.this, TestActivity.class).putExtra(Intent.EXTRA_TEXT, test);
                    intent.putExtra("Factorul de succes",1);
                    startActivity(intent);
+                   finish();
                }
           }
        });

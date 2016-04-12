@@ -31,6 +31,7 @@ public class TestActivity extends AppCompatActivity {
                 Intent intent = new Intent(TestActivity.this,TestProgressActivity.class);
                 intent.putExtra("Tarie de caracter",0);
                 startActivity(intent);
+                finish();
             }
         });
     }

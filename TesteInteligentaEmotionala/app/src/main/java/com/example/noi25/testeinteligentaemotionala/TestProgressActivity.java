@@ -63,6 +63,7 @@ public class TestProgressActivity extends Activity {
                     Intent intent = new Intent(getApplicationContext(),FinishTestActivity.class);
                     intent.putExtra("Scor",suma);
                     startActivity(intent);
+                    finish();
                 }
             }
         });
