@@ -3,6 +3,7 @@ package com.example.noi25.testeinteligentaemotionala;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -22,6 +23,7 @@ public class TestProgressActivity extends AppCompatActivity {
     int suma;
 
     List<Question> quesList;
+    String ans = "25";
     int score=0;
     int qid=0;
     Question currentQ;
@@ -58,10 +60,12 @@ public class TestProgressActivity extends AppCompatActivity {
                 }
 
                 if (isChecked) {
-                    suma += 2;
+                    Log.d("raspuns", "r: " + Integer.parseInt(currentQ.getANSWER()));
+                    suma += Integer.parseInt(currentQ.getANSWER());
                     buttonYes.setChecked(false);
                 } else {
-                    suma += 1;
+                    Log.d("raspuns", "r: " + Integer.parseInt(currentQ.getANSWER()));
+                    suma += Integer.parseInt(currentQ.getANSWER());
                     buttonNo.setChecked(false);
                 }
 
@@ -85,8 +89,8 @@ public class TestProgressActivity extends AppCompatActivity {
     private void setQuestionView()
     {
         enuntIntrebare.setText(currentQ.getQUESTION());
-//        rda.setText(currentQ.getOPTA());
-//        rdb.setText(currentQ.getOPTB());
+        //buttonYes.setText(currentQ.getOPTA());
+        //buttonNo.setText(currentQ.getOPTB());
 //        rdc.setText(currentQ.getOPTC());
         qid++;
     }

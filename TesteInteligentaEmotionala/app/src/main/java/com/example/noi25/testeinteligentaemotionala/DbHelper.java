@@ -29,7 +29,7 @@ public class DbHelper extends SQLiteOpenHelper {
         dbase=db;
         String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_QUEST + " ( "
                 + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_QUES
-                + " TEXT, " + KEY_ANSWER+ " TEXT, "+KEY_OPTA +" TEXT, "
+                + " TEXT, " + KEY_ANSWER + " TEXT, "+KEY_OPTA +" TEXT, "
                 +KEY_OPTB +" TEXT, "+KEY_OPTC+" TEXT)";
         db.execSQL(sql);
         addQuestions();
@@ -37,21 +37,11 @@ public class DbHelper extends SQLiteOpenHelper {
     }
     private void addQuestions()
     {
-        Question q1=new Question("Which company is the largest manufacturer" +
-                " of network equipment?","HP", "IBM", "CISCO", "CISCO");
+        Question q1=new Question("Intrebarea 1","HP", "IBM", "1", "10");
         this.addQuestion(q1);
-        Question q2=new Question("Which of the following is NOT " +
-                "an operating system?", "SuSe", "BIOS", "DOS", "BIOS");
+
+        Question q2=new Question("Intrebarea 2", "SuSe", "BIOS", "DOS", "10");
         this.addQuestion(q2);
-        Question q3=new Question("Which of the following is the fastest" +
-                " writable memory?","RAM", "FLASH","Register","Register");
-        this.addQuestion(q3);
-        Question q4=new Question("Which of the following device" +
-                " regulates internet traffic?",	"Router", "Bridge", "Hub","Router");
-        this.addQuestion(q4);
-        Question q5=new Question("Which of the following is NOT an" +
-                " interpreted language?","Ruby","Python","BASIC","BASIC");
-        this.addQuestion(q5);
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {
