@@ -1,6 +1,5 @@
 package com.example.noi25.testeinteligentaemotionala;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,9 +8,9 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import java.util.List;
 
-public class TestProgressActivity extends Activity {
+public class TestProgressActivity extends AppCompatActivity {
 
     int numarIntrebari = 2;
     int intrebareCurenta = 0;
@@ -21,6 +20,11 @@ public class TestProgressActivity extends Activity {
     RadioButton buttonYes;
     RadioButton buttonNo;
     int suma;
+
+    List<Question> quesList;
+    int score=0;
+    int qid=0;
+    Question currentQ;
 
     String[] intrebari = {
             "Ana are mere?",
@@ -32,8 +36,13 @@ public class TestProgressActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_progress_model_1);
 
+        DbHelper db=new DbHelper(this);
+        quesList=db.getAllQuestions();
+        currentQ=quesList.get(qid);
+
         enuntIntrebare = (TextView) findViewById(R.id.textQuestion);
-        enuntIntrebare.setText(intrebari[intrebareCurenta]);
+        setQuestionView();
+        //enuntIntrebare.setText(intrebari[intrebareCurenta]);
 
         buttonYes = (RadioButton) findViewById(R.id.buttonYes);
         buttonNo = (RadioButton) findViewById(R.id.buttonNo);
@@ -57,8 +66,11 @@ public class TestProgressActivity extends Activity {
                 }
 
                 intrebareCurenta++;
-                if (intrebareCurenta < numarIntrebari)
-                    enuntIntrebare.setText(intrebari[intrebareCurenta]);
+                if (intrebareCurenta < numarIntrebari){
+                    currentQ=quesList.get(qid);
+                    setQuestionView();
+                }
+                    //enuntIntrebare.setText(intrebari[intrebareCurenta]);
                 else{
                     Intent intent = new Intent(getApplicationContext(),FinishTestActivity.class);
                     intent.putExtra("Scor",suma);
@@ -68,6 +80,15 @@ public class TestProgressActivity extends Activity {
             }
         });
 
+    }
+
+    private void setQuestionView()
+    {
+        enuntIntrebare.setText(currentQ.getQUESTION());
+//        rda.setText(currentQ.getOPTA());
+//        rdb.setText(currentQ.getOPTB());
+//        rdc.setText(currentQ.getOPTC());
+        qid++;
     }
 
 }
