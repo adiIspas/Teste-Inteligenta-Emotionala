@@ -37,17 +37,21 @@ public class DbHelper extends SQLiteOpenHelper {
 	}
 	private void addQuestions()
 	{
-		Question q1=new Question("Intrebarea 1?","DAAAA", "NU", "11", "21");
+		Question q1=new Question("Which company is the largest manufacturer" +
+				" of network equipment?","DAAAA", "NU", "11", "21");
 		this.addQuestion(q1);
-		Question q2=new Question("Intrebarea 2?", "DA :)", "NUUU", "12", "22");
+		Question q2=new Question("Which of the following is NOT " +
+				"an operating system?", "DA :)", "NUUU", "12", "22");
 		this.addQuestion(q2);
-		Question q3=new Question("Intrebarea 3?","DA", "NU","13","23");
+		Question q3=new Question("Which of the following is the fastest" +
+				" writable memory?","DA", "NU","13","23");
 		this.addQuestion(q3);
-//		Question q4=new Question("Intrebarea 4?",	"DA", "NU", "14","24");
-//		this.addQuestion(q4);
-//		Question q5=new Question("Which of the following is NOT an" +
-//				" interpreted language?","DA","NU","15","25");
-//		this.addQuestion(q5);
+		Question q4=new Question("Which of the following device" +
+				" regulates internet traffic?",	"DA", "NU", "14","24");
+		this.addQuestion(q4);
+		Question q5=new Question("Which of the following is NOT an" +
+				" interpreted language?","DA","NU","15","25");
+		this.addQuestion(q5);
 	}
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {
