@@ -60,8 +60,8 @@ public class TestProgressActivity extends AppCompatActivity {
                 }
 
                 if (isChecked) {
-                    Log.d("raspuns", "r: " + Integer.parseInt(currentQ.getANSWER()));
-                    suma += Integer.parseInt(currentQ.getANSWER());
+                    Log.d("raspuns", "r: " + Integer.parseInt(currentQ.getOPTC()));
+                    suma += Integer.parseInt(currentQ.getOPTC());
                     buttonYes.setChecked(false);
                 } else {
                     Log.d("raspuns", "r: " + Integer.parseInt(currentQ.getANSWER()));
@@ -91,7 +91,6 @@ public class TestProgressActivity extends AppCompatActivity {
         enuntIntrebare.setText(currentQ.getQUESTION());
         //buttonYes.setText(currentQ.getOPTA());
         //buttonNo.setText(currentQ.getOPTB());
-//        rdc.setText(currentQ.getOPTC());
         qid++;
     }
 
