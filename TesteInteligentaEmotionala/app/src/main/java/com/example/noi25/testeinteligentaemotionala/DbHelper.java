@@ -38,10 +38,10 @@ public class DbHelper extends SQLiteOpenHelper {
 	private void addQuestions()
 	{
 		Question q1=new Question("Which company is the largest manufacturer" +
-				" of network equipment?","DA", "NU", "11", "21");
+				" of network equipment?","DAAAA", "NU", "11", "21");
 		this.addQuestion(q1);
 		Question q2=new Question("Which of the following is NOT " +
-				"an operating system?", "DA", "NU", "12", "22");
+				"an operating system?", "DA :)", "NUUU", "12", "22");
 		this.addQuestion(q2);
 		Question q3=new Question("Which of the following is the fastest" +
 				" writable memory?","DA", "NU","13","23");
