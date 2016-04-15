@@ -54,6 +54,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.noi25.testeinteligentaemotionala.TestsActivity" />
         </activity>
+        <activity
+            android:name=".NotImplementTestActivity"
+            android:label="@string/title_activity_not_implement_test"
+            android:parentActivityName=".TestsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.noi25.testeinteligentaemotionala.TestsActivity" />
+        </activity>
     </application>
 
 </manifest>

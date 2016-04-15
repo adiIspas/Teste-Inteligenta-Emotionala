@@ -22,10 +22,12 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Tarie de caracter foarte mare"
         android:textColor="@color/white"
+        android:textAlignment="center"
         android:id="@+id/shortScoreDescription"
         android:layout_above="@+id/completScoreDescription"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="49dp" />
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -34,7 +36,6 @@
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas, elit ut maximus pellentesque, mi nisi rhoncus urna, vel euismod mauris eros in diam. Integer euismod, velit vitae ultricies tincidunt, ante elit bibendum libero, imperdiet hendrerit augue metus vitae lorem."
         android:id="@+id/completScoreDescription"
         android:textColor="@color/white"
-        android:textAlignment="center"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dp"

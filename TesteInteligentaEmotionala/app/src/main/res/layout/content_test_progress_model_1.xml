@@ -14,6 +14,8 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:layout_marginTop="82dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -34,6 +36,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="37dp"
             android:text="NU"
             android:id="@+id/buttonNo"
             android:textColor="@color/black"

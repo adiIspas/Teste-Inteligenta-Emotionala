@@ -33,7 +33,7 @@ public class TestsActivity extends AppCompatActivity {
                 "Planificat sau spontan",
                 "Incredere in sine",
                 "Emotivitate",
-                "Va descurcatii in conditii de presiune",
+                "Va descurcati in conditii de presiune",
                 "Diplomat sau lipsit de tact",
                 "Factorul leadership",
                 "Dur sau tandru",
@@ -58,19 +58,16 @@ public class TestsActivity extends AppCompatActivity {
                switch (position) {
                    case 0: {
                        Intent intent = new Intent(TestsActivity.this, TestActivity.class).putExtra(Intent.EXTRA_TEXT, test);
-                       intent.putExtra("Inteligenta sociala", position);
+                       intent.putExtra("Categorie", position);
                        startActivity(intent);
                        finish();
                    } break;
 
-                   case 1: {
-                       Intent intent = new Intent(TestsActivity.this, TestActivity.class).putExtra(Intent.EXTRA_TEXT, test);
-                       intent.putExtra("Factorul de succes", position);
+                   default: {
+                       Intent intent = new Intent(TestsActivity.this, NotImplementTestActivity.class).putExtra(Intent.EXTRA_TEXT, test);
                        startActivity(intent);
                        finish();
-                   } break;
-
-                   default: break;
+                   }
                }
           }
        });

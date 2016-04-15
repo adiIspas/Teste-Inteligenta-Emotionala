@@ -41,14 +41,26 @@ public class DbHelper extends SQLiteOpenHelper {
 	}
 
 	private void addQuestions() {
-		Question q1=new Question("Intrebarea 1","DAAAA", "NU", "11", "21");
+		Question q1 = new Question("Uneori nu ma simt in largul meu cand vorbesc cu oameni necunoscuti.","DA", "NU", "0", "2");
 		this.addQuestion(q1);
 
-		Question q2=new Question("Intrebarea 2", "DA :)", "NUUU", "12", "22");
+		Question q2 = new Question("Uneori ii accept cu greu pe oameni asa cum sunt ei.", "DA", "NU", "0", "2");
 		this.addQuestion(q2);
 
-		Question q3=new Question("Intrebarea 3","DA", "NU","13","23");
+		Question q3 = new Question("Ma simt in largul meu in mijlocul unei multimi de oameni.","DA", "NU","2","0");
 		this.addQuestion(q3);
+
+		Question q4 = new Question("Am prestat unele activitati in comunitatea mea.","DA", "NU","2","0");
+		this.addQuestion(q4);
+
+		Question q5 = new Question("Imi face placere sa particip la discutii de grup.","DA", "NU","2","0");
+		this.addQuestion(q5);
+
+		Question q6 = new Question("Consider important sa ma implic in viata sociala de la un loc de munca nou.","DA", "NU","2","0");
+		this.addQuestion(q6);
+
+		Question q7 = new Question("Imi vine greu sa recunosc comiterea unor greseli.","DA", "NU","2","0");
+		this.addQuestion(q7);
 	}
 
 	@Override

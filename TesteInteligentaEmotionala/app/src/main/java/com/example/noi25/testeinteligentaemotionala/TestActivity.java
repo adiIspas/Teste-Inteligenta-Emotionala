@@ -42,7 +42,7 @@ public class TestActivity extends AppCompatActivity {
     String[] testDescriptionContent = {
             "In testul care urmeaza trebuie sa raspundeti prin DA sau NU " +
             "la fiecare afirmatie, in functie de afirmatia care va reprezinta cel mai bine. " +
-            "\n\nAlegeti DA in cazul in care afirmatia respectiva va reprezinta sau NU in caz contrar"
+            "\n\nAlegeti DA in cazul in care afirmatia respectiva va reprezinta sau NU in caz contrar."
     };
 
     @Override
@@ -54,7 +54,7 @@ public class TestActivity extends AppCompatActivity {
         testDescription = (TextView) findViewById(R.id.testDescription);
 
         startTest = (Button) findViewById(R.id.buttonStartTest);
-        position = getIntent().getIntExtra("Inteligenta sociala",-1);
+        position = getIntent().getIntExtra("Categorie",-1);
 
         switch (position){
             case 0: {
@@ -65,7 +65,7 @@ public class TestActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(TestActivity.this,TestProgressActivity.class);
-                        intent.putExtra("Inteligenta sociala",position);
+                        intent.putExtra("Categorie", position);
                         startActivity(intent);
                         finish();
                     }

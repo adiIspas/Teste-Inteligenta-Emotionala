@@ -14,6 +14,8 @@ public class TestProgressActivity extends Activity {
     List<Question> questionsList;
     int score = 0;
     int qid = 0;
+    int position;
+    int[] numberQuestions = {7};
     Question currentQuestion;
     TextView textQuestion;
     RadioButton buttonYes, buttonNo;
@@ -32,6 +34,8 @@ public class TestProgressActivity extends Activity {
         buttonYes = (RadioButton)findViewById(R.id.buttonYes);
         buttonNo = (RadioButton)findViewById(R.id.buttonNo);
         buttonNext = (Button)findViewById(R.id.buttonNextQuestion);
+
+        position = getIntent().getIntExtra("Categorie",-1);
 
         setQuestionView();
 
@@ -61,12 +65,13 @@ public class TestProgressActivity extends Activity {
                     buttonNo.setClickable(true);
                 }
 
-                if (qid < 3){
+                if (qid < numberQuestions[position]){
                     currentQuestion=questionsList.get(qid);
                     setQuestionView();
                 }
                 else {
                     Intent intent = new Intent(getApplicationContext(),FinishTestActivity.class);
+                    intent.putExtra("Categorie",position);
                     intent.putExtra("Scor",score);
                     startActivity(intent);
                     finish();
