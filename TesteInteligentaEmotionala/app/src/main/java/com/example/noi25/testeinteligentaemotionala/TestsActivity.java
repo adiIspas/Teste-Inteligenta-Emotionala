@@ -18,35 +18,34 @@ public class TestsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tests);
 
         String[] categoryTest = {
-                "Tarie de caracter",
+                "Inteligenta sociala",
                 "Factorul de succes",
                 "Atitudinea",
-                "Inteligenta sociala",
+                "Taria de caracter",
+                "Multumit sau fara astampar",
+                "Extravertit sau introvertit",
+                "Cat de categoric sunteti",
+                "Lateralitatea",
                 "Optimist sau pesimist",
-                "Tarie de caracter",
-                "Factorul de succes",
-                "Atitudinea",
-                "Inteligenta sociala",
-                "Optimist sau pesimist",
-                "Tarie de caracter",
-                "Factorul de succes",
-                "Atitudinea",
-                "Inteligenta sociala",
-                "Optimist sau pesimist",
-                "Tarie de caracter",
-                "Factorul de succes",
-                "Atitudinea",
-                "Inteligenta sociala",
-                "Optimist sau pesimist"
+                "Agresivitatea",
+                "Aventuros sau timid",
+                "Cat de rabdator sunteti",
+                "Planificat sau spontan",
+                "Incredere in sine",
+                "Emotivitate",
+                "Va descurcatii in conditii de presiune",
+                "Diplomat sau lipsit de tact",
+                "Factorul leadership",
+                "Dur sau tandru",
+                "Deschis sau inchis",
+                "Darul cumpatarii",
+                "Suferiti de obsesii"
         };
 
-        ListView listTests = (ListView) findViewById(R.id.listTests);
-
         final ArrayAdapter<String> listAdapter;
-
+        ListView listTests = (ListView) findViewById(R.id.listTests);
         ArrayList<String> tests = new ArrayList<>();
         tests.addAll(Arrays.asList(categoryTest));
-
         listAdapter = new ArrayAdapter<>(this, R.layout.simple_entry_test, tests);
 
         listTests.setAdapter(listAdapter);
@@ -55,17 +54,23 @@ public class TestsActivity extends AppCompatActivity {
            @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                String test = listAdapter.getItem(position);
-               if(position == 0){
-                    Intent intent = new Intent(TestsActivity.this, TestActivity.class).putExtra(Intent.EXTRA_TEXT, test);
-                    intent.putExtra("Tarie de caracter",0);
-                    startActivity(intent);
-                    finish();
-               }
-               if(position == 1){
-                   Intent intent = new Intent(TestsActivity.this, TestActivity.class).putExtra(Intent.EXTRA_TEXT, test);
-                   intent.putExtra("Factorul de succes",1);
-                   startActivity(intent);
-                   finish();
+
+               switch (position) {
+                   case 0: {
+                       Intent intent = new Intent(TestsActivity.this, TestActivity.class).putExtra(Intent.EXTRA_TEXT, test);
+                       intent.putExtra("Inteligenta sociala", position);
+                       startActivity(intent);
+                       finish();
+                   } break;
+
+                   case 1: {
+                       Intent intent = new Intent(TestsActivity.this, TestActivity.class).putExtra(Intent.EXTRA_TEXT, test);
+                       intent.putExtra("Factorul de succes", position);
+                       startActivity(intent);
+                       finish();
+                   } break;
+
+                   default: break;
                }
           }
        });

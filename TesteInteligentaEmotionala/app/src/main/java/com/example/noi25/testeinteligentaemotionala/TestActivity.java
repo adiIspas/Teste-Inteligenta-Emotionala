@@ -2,37 +2,77 @@ package com.example.noi25.testeinteligentaemotionala;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class TestActivity extends AppCompatActivity {
+
+    int position;
+    Button startTest;
+    TextView testName;
+    TextView testDescription;
+
+    String[] categoryTest = {
+            "Inteligenta sociala",
+            "Factorul de succes",
+            "Atitudinea",
+            "Taria de caracter",
+            "Multumit sau fara astampar",
+            "Extravertit sau introvertit",
+            "Cat de categoric sunteti",
+            "Lateralitatea",
+            "Optimist sau pesimist",
+            "Agresivitatea",
+            "Aventuros sau timid",
+            "Cat de rabdator sunteti",
+            "Planificat sau spontan",
+            "Incredere in sine",
+            "Emotivitate",
+            "Va descurcatii in conditii de presiune",
+            "Diplomat sau lipsit de tact",
+            "Factorul leadership",
+            "Dur sau tandru",
+            "Deschis sau inchis",
+            "Darul cumpatarii",
+            "Suferiti de obsesii"
+    };
+
+    String[] testDescriptionContent = {
+            "In testul care urmeaza trebuie sa raspundeti prin DA sau NU " +
+            "la fiecare afirmatie, in functie de afirmatia care va reprezinta cel mai bine. " +
+            "\n\nAlegeti DA in cazul in care afirmatia respectiva va reprezinta sau NU in caz contrar"
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
 
-        Button startTest = (Button) findViewById(R.id.buttonStartTest);
+        testName = (TextView) findViewById(R.id.testName);
+        testDescription = (TextView) findViewById(R.id.testDescription);
 
-        int position;
+        startTest = (Button) findViewById(R.id.buttonStartTest);
+        position = getIntent().getIntExtra("Inteligenta sociala",-1);
 
-        position = getIntent().getIntExtra("Tarie de caracter",-1);
+        switch (position){
+            case 0: {
+                testName.setText(categoryTest[position]);
+                testDescription.setText(testDescriptionContent[position]);
 
-        if(position == 0)
-            startTest.setText("Start Tarie de caracter");
+                startTest.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(TestActivity.this,TestProgressActivity.class);
+                        intent.putExtra("Inteligenta sociala",position);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+            } break;
 
-        startTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(TestActivity.this,TestProgressActivity.class);
-                intent.putExtra("Tarie de caracter",0);
-                startActivity(intent);
-                finish();
-            }
-        });
+            default: break;
+        }
     }
 }
