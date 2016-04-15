@@ -38,12 +38,12 @@ public class TestProgressActivity extends Activity {
                 }
 
                 if (isChecked) {
-                    Log.d("raspuns", "r: " + Integer.parseInt(currentQ.getOPTC()));
-                    score += Integer.parseInt(currentQ.getOPTC());
+                    Log.d("raspuns", "r: " + Integer.parseInt(currentQ.getANSWER1()));
+                    score += Integer.parseInt(currentQ.getANSWER1());
                     rda.setChecked(false);
                 } else {
-                    Log.d("raspuns", "r: " + Integer.parseInt(currentQ.getANSWER()));
-                    score += Integer.parseInt(currentQ.getANSWER());
+                    Log.d("raspuns", "r: " + Integer.parseInt(currentQ.getANSWER2()));
+                    score += Integer.parseInt(currentQ.getANSWER2());
                     rdb.setChecked(false);
                 }
 
