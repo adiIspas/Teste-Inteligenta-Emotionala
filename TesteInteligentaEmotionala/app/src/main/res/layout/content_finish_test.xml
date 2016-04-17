@@ -2,27 +2,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple">
+    android:background="@layout/finish_test_header_selector">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_marginTop="10dp"
         android:text="Punctaj 60"
+        android:textSize="20dp"
         android:id="@+id/score"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/buttonTestAgain"
-        android:layout_alignEnd="@+id/buttonTestAgain" />
+        android:layout_alignLeft="@+id/buttonTestAgain"
+        android:layout_alignStart="@+id/buttonTestAgain"
+        android:layout_marginTop="40dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Tarie de caracter foarte mare"
+        android:text="Inteligenta sociala exceptional de mare"
         android:textColor="@color/white"
         android:textAlignment="center"
+        android:textSize="20dp"
         android:id="@+id/shortScoreDescription"
         android:layout_above="@+id/completScoreDescription"
         android:layout_centerHorizontal="true"
@@ -36,6 +38,7 @@
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas, elit ut maximus pellentesque, mi nisi rhoncus urna, vel euismod mauris eros in diam. Integer euismod, velit vitae ultricies tincidunt, ante elit bibendum libero, imperdiet hendrerit augue metus vitae lorem."
         android:id="@+id/completScoreDescription"
         android:textColor="@color/white"
+        android:textSize="20dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dp"

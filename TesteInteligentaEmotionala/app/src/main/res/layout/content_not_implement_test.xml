@@ -8,21 +8,10 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/red"
+    android:background="@layout/not_implement_header_selector"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.noi25.testeinteligentaemotionala.NotImplementTestActivity"
     tools:showIn="@layout/activity_not_implement_test">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Din pacate acest test inca nu este gata. \n\nTe rugam sa revi curand."
-        android:id="@+id/notImplementTest"
-        android:textSize="25dp"
-        android:textColor="@color/white"
-        android:textAlignment="center"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -31,4 +20,36 @@
         android:id="@+id/buttonTestAgain2"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width = "150dp"
+        android:layout_height= "150dp"
+        android:id="@+id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/underconstruction" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Acest test se află încă în dezvoltare."
+        android:textAlignment="center"
+        android:id="@+id/textView"
+        android:textColor="@color/white"
+        android:layout_above="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="69dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Te rugăm să revi curând."
+        android:textAlignment="center"
+        android:id="@+id/textView2"
+        android:textColor="@color/white"
+        android:layout_above="@+id/buttonTestAgain2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="47dp" />
 </RelativeLayout>

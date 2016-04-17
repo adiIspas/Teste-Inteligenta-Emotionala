@@ -2,7 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue">
+    android:background="@layout/tests_header_selector">
+
+    <ImageView
+        android:layout_width = "75dp"
+        android:layout_height= "75dp"
+        android:id="@+id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/face"
+        android:layout_gravity="center_horizontal" />
 
     <ListView
         android:layout_width="wrap_content"

@@ -50,7 +50,7 @@ public class DbHelper extends SQLiteOpenHelper {
 		Question q3 = new Question("Ma simt in largul meu in mijlocul unei multimi de oameni.","DA", "NU","2","0");
 		this.addQuestion(q3);
 
-		Question q4 = new Question("Am prestat unele activitati in comunitatea mea.","DA", "NU","2","0");
+		Question q4 = new Question("Am prestat unele activitati voluntare in comunitatea mea.","DA", "NU","2","0");
 		this.addQuestion(q4);
 
 		Question q5 = new Question("Imi face placere sa particip la discutii de grup.","DA", "NU","2","0");
@@ -61,6 +61,81 @@ public class DbHelper extends SQLiteOpenHelper {
 
 		Question q7 = new Question("Imi vine greu sa recunosc comiterea unor greseli.","DA", "NU","2","0");
 		this.addQuestion(q7);
+
+		Question q8 = new Question("Nu sunt o persoana care sa caute in mod continuu experiente si idei noi.","DA", "NU","0","2");
+		this.addQuestion(q8);
+
+		Question q9 = new Question("Ma interereseaza la fel de mult mediul ambiant ca si lumeain general.","DA", "NU","2","0");
+		this.addQuestion(q9);
+
+		Question q10 = new Question("Nu-mi vine usor sa imi fac prieteni.","DA", "NU","0","2");
+		this.addQuestion(q10);
+
+		Question q11 = new Question("Petrec o parte foarte mica a timpului meu liber pentru a socializa activ cu un grup de oameni sau pentru a participa la petreceri.","DA", "NU","0","2");
+		this.addQuestion(q11);
+
+		Question q12 = new Question("Intarzii foarte rar la intalniri.","DA", "NU","2","0");
+		this.addQuestion(q12);
+
+		Question q13 = new Question("Ma inteleg la fel de bine cu oameni de toate varstele si ma bucur de compania lor.","DA", "NU","2","0");
+		this.addQuestion(q13);
+
+		Question q14 = new Question("Intodeauna raspund cu promptitudine la corespondenta.","DA", "NU","2","0");
+		this.addQuestion(q14);
+
+		Question q15 = new Question("Ma straduiesc in mod constient sa gandesc inainte de a spune ori a face ceva.","DA", "NU","2","0");
+		this.addQuestion(q15);
+
+		Question q16 = new Question("Pentru mine este important sa incerc sa fiu constient de nevoile si dorintele altora.","DA", "NU","2","0");
+		this.addQuestion(q16);
+
+		Question q17 = new Question("Prefer sa discut personal cu un singur om decat cu un grup format din mai mult de cinci persoane.","DA", "NU","0","2");
+		this.addQuestion(q17);
+
+		Question q18 = new Question("Constat ca imi vine greu sa ma alatur conversatiilor la reuniunile sociale si manifest mai degraba tendinta de a asculta.","DA", "NU","0","2");
+		this.addQuestion(q18);
+
+		Question q19 = new Question("Prefer sa am un cerc larg si variat de prieteni si cunostinte","DA", "NU","2","0");
+		this.addQuestion(q19);
+
+		Question q20 = new Question("Rareori leg prietenii noi si de durata in timpul vacantelor, ba poate chiar niciodata.","DA", "NU","0","2");
+		this.addQuestion(q20);
+
+		Question q21 = new Question("Prefer sa ma izolez de agitatia si trepidatia vietii cotidiene.","DA", "NU","0","2");
+		this.addQuestion(q21);
+
+		Question q22 = new Question("Adesea caut sfaturile altora sau le cer parerea.","DA", "NU","2","0");
+		this.addQuestion(q22);
+
+		Question q23 = new Question("Intodeauna le telefonez persoanelor care m-au cautat in absenta mea si mi-au lasat vorba sa le sun.","DA", "NU","2","0");
+		this.addQuestion(q23);
+
+		Question q24 = new Question("Imi vine foarte greu sa discut drespre sentimentele mele.","DA", "NU","0","2");
+		this.addQuestion(q24);
+
+		Question q25 = new Question("Cand sunt intr-o incapere plina de oameni la o reuniune sociala, ma pozitionez mai degraba spre perete decat spre centrul salii.","DA", "NU","0","2");
+		this.addQuestion(q25);
+
+		Question q26 = new Question("Sunt capabil sa-i incurajez pe oameni sa imi impartaseasca problemele lor.","DA", "NU","2","0");
+		this.addQuestion(q26);
+
+		Question q27 = new Question("Daca vrei sa iasa o treaba buna, fa-o tu insuti.","DA", "NU","0","2");
+		this.addQuestion(q27);
+
+		Question q28 = new Question("As prefera o slujba care sa implice multa interactiune cu oamenii.","DA", "NU","2","0");
+		this.addQuestion(q28);
+
+		Question q29 = new Question("Este mai important sa cunosti oamenii potriviti, decat sa ai un cerc larg de cunostinte.","DA", "NU","0","2");
+		this.addQuestion(q29);
+
+		Question q30 = new Question("Nu pot spune cu ca astept cu nerabdare sa particip la evenimente sociale de amploare, cum ar fi nuntile.","DA", "NU","0","2");
+		this.addQuestion(q30);
+
+		Question q31 = new Question("Prefer sa fiu singuratic, decat sociabil.","DA", "NU","0","2");
+		this.addQuestion(q31);
+
+		Question q32 = new Question("Imi vine greu sa incep o conversatie cu necunoscuti.","DA", "NU","0","2");
+		this.addQuestion(q32);
 	}
 
 	@Override

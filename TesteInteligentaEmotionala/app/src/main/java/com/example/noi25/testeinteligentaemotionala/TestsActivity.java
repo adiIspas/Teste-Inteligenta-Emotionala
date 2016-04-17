@@ -18,28 +18,28 @@ public class TestsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tests);
 
         String[] categoryTest = {
-                "Inteligenta sociala",
+                "Inteligență socială",
                 "Factorul de succes",
                 "Atitudinea",
-                "Taria de caracter",
-                "Multumit sau fara astampar",
+                "Tăria de caracter",
+                "Mulțumit sau fără astâmpăr",
                 "Extravertit sau introvertit",
-                "Cat de categoric sunteti",
+                "Cât de categoric sunteți",
                 "Lateralitatea",
                 "Optimist sau pesimist",
                 "Agresivitatea",
                 "Aventuros sau timid",
-                "Cat de rabdator sunteti",
+                "Cât de răbdător sunteți",
                 "Planificat sau spontan",
-                "Incredere in sine",
+                "Încredere în sine",
                 "Emotivitate",
-                "Va descurcati in conditii de presiune",
+                "Vă descurcați în condiții de presiune",
                 "Diplomat sau lipsit de tact",
                 "Factorul leadership",
                 "Dur sau tandru",
-                "Deschis sau inchis",
-                "Darul cumpatarii",
-                "Suferiti de obsesii"
+                "Deschis sau închis",
+                "Darul cumpatării",
+                "Suferiți de obsesii"
         };
 
         final ArrayAdapter<String> listAdapter;

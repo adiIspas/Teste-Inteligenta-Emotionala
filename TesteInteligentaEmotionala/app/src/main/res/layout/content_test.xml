@@ -3,13 +3,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orange">
+    android:background="@layout/test_header_selector">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Taria de caracter"
+        android:textColor="@color/white"
         android:id="@+id/testName"
         android:layout_gravity="center_horizontal"
         android:layout_above="@+id/testDescription"
@@ -22,6 +23,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas, elit ut maximus pellentesque, mi nisi rhoncus urna, vel euismod mauris eros in diam. Integer euismod, velit vitae ultricies tincidunt, ante elit bibendum libero, imperdiet hendrerit augue metus vitae lorem."
         android:id="@+id/testDescription"
+        android:textColor="@color/white"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_centerVertical="true"

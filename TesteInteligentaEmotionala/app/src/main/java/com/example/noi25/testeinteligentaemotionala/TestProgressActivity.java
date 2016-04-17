@@ -9,13 +9,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class TestProgressActivity extends Activity {
     List<Question> questionsList;
     int score = 0;
     int qid = 0;
     int position;
-    int[] numberQuestions = {7};
+    int[] numberQuestions = {32};
+    static int currentQuestionNumber = 1;
+    String remainingQuestionsText;
+    int remainingQuestionsValue;
     Question currentQuestion;
     TextView textQuestion;
     RadioButton buttonYes, buttonNo;
@@ -46,9 +50,6 @@ public class TestProgressActivity extends Activity {
 
                 if (buttonYes.isChecked()) {
                     isChecked = true;
-                }
-
-                if (isChecked) {
                     Log.d("raspuns", "r: " + Integer.parseInt(currentQuestion.getANSWER1()));
                     score += Integer.parseInt(currentQuestion.getANSWER1());
 
@@ -56,33 +57,44 @@ public class TestProgressActivity extends Activity {
                     buttonYes.setSelected(false);
                     buttonYes.setClickable(true);
                 }
-                else {
-                    Log.d("raspuns", "r: " + Integer.parseInt(currentQuestion.getANSWER2()));
-                    score += Integer.parseInt(currentQuestion.getANSWER2());
+                else
+                    if(buttonNo.isChecked()) {
+                        isChecked = true;
+                        Log.d("raspuns", "r: " + Integer.parseInt(currentQuestion.getANSWER2()));
+                        score += Integer.parseInt(currentQuestion.getANSWER2());
 
-                    buttonNo.setChecked(false);
-                    buttonNo.setSelected(false);
-                    buttonNo.setClickable(true);
+                        buttonNo.setChecked(false);
+                        buttonNo.setSelected(false);
+                        buttonNo.setClickable(true);
                 }
 
-                if (qid < numberQuestions[position]){
-                    currentQuestion=questionsList.get(qid);
-                    setQuestionView();
+                if(isChecked != false){
+                    if (qid < numberQuestions[position]){
+                        currentQuestion=questionsList.get(qid);
+                        setQuestionView();
+                    }
+                    else {
+                        Intent intent = new Intent(getApplicationContext(),FinishTestActivity.class);
+                        intent.putExtra("Categorie",position);
+                        intent.putExtra("Scor",score);
+                        currentQuestionNumber = 1;
+                        startActivity(intent);
+                        finish();
+                    }
                 }
                 else {
-                    Intent intent = new Intent(getApplicationContext(),FinishTestActivity.class);
-                    intent.putExtra("Categorie",position);
-                    intent.putExtra("Scor",score);
-                    startActivity(intent);
-                    finish();
+                    Toast toast = Toast.makeText(getApplicationContext(),"Te rugăm să răspunzi la întrebarea curentă pentru a trece la urmatoarea.",Toast.LENGTH_SHORT);
+                    toast.show();
                 }
             }
         });
     }
 
-    private void setQuestionView()
-    {
-        textQuestion.setText(currentQuestion.getQUESTION());
+    private void setQuestionView(){
+        remainingQuestionsValue = numberQuestions[position] - currentQuestionNumber;
+        remainingQuestionsText = "Au mai ramas " + remainingQuestionsValue + " intrebări\n\n";
+        textQuestion.setText(remainingQuestionsText + currentQuestionNumber + ". " + currentQuestion.getQUESTION());
+        currentQuestionNumber++;
         buttonYes.setText(currentQuestion.getOPTA());
         buttonNo.setText(currentQuestion.getOPTB());
         qid++;
