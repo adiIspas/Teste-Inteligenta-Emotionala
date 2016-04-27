@@ -65,7 +65,7 @@ public class DbHelper extends SQLiteOpenHelper {
 		Question q8 = new Question("Nu sunt o persoana care sa caute in mod continuu experiente si idei noi.","DA", "NU","0","2");
 		this.addQuestion(q8);
 
-		Question q9 = new Question("Ma interereseaza la fel de mult mediul ambiant ca si lumeain general.","DA", "NU","2","0");
+		Question q9 = new Question("Ma interereseaza la fel de mult mediul ambiant ca si lumea in general.","DA", "NU","2","0");
 		this.addQuestion(q9);
 
 		Question q10 = new Question("Nu-mi vine usor sa imi fac prieteni.","DA", "NU","0","2");
